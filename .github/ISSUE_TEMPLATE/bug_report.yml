@@ -1,0 +1,98 @@
+name: Bug report
+description: Report a problem with Termorq (Free, Trial, or Pro)
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem! Please [search existing issues](https://github.com/garrardkitchen/termorq-support/issues?q=is%3Aissue) first.
+
+        **Security vulnerabilities:** do not use this form — follow [SECURITY.md](https://github.com/garrardkitchen/termorq-support/blob/main/SECURITY.md).
+        **Never post secrets:** remove credentials, tokens, private prompts, and personal data from all details, logs, and screenshots.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear, short description of the problem.
+    validations:
+      required: true
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Edition
+      options:
+        - Free
+        - Trial
+        - Pro
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: paid
+    attributes:
+      label: Are you a Pro (paid) or active Trial user?
+      description: Helps us prioritise support.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: OS version
+      placeholder: e.g. Windows 11 24H2, macOS 15.1, Ubuntu 24.04
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Termorq version / Store build
+      description: Shown in the app, or in Microsoft Store → Library. Say how you installed it if not from the Store.
+      placeholder: e.g. 0.10.0 (Microsoft Store)
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that reproduces the problem.
+      placeholder: "1. Open...\n2. Select...\n3. Observe..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Screenshots or logs
+      description: Redact secrets, private prompts, and personal data before posting.
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Purchase or licence details (no order numbers or payment info), workarounds, or other context.
+    validations:
+      required: false

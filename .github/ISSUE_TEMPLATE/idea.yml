@@ -1,0 +1,52 @@
+name: Idea (feature request)
+description: Suggest a new feature or improvement — Free and Pro users welcome
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing an idea! Please [search existing issues](https://github.com/garrardkitchen/termorq-support/issues?q=is%3Aissue) first — if it's already there, add a 👍.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One line describing the idea.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / why it matters
+      description: What are you trying to do, and what gets in the way?
+    validations:
+      required: false
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution or idea
+      description: Describe the change and how you'd expect it to work.
+    validations:
+      required: false
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who benefits?
+      options:
+        - Everyone
+        - Free users
+        - Pro users
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra context
+      description: Mockups, screenshots, or links. Remember to redact anything private.
+    validations:
+      required: false
